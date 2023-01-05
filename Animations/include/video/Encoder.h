@@ -2,11 +2,12 @@
 #define MATH_ANIM_VIDEO_WRITER_H
 #include "core.h"
 
-struct AVOutputFormat;
-struct AVFrame;
-struct AVCodecContext;
-struct SwsContext;
-struct AVFormatContext;
+extern "C"
+{
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libswscale/swscale.h>
+}
 
 namespace MathAnim
 {
